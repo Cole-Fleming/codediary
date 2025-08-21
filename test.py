@@ -23,14 +23,15 @@ def is_even_odd():
     print(x_even)
     return(x_even)
 my_e_o = is_even_odd()
-if my_e_o == True:
+while my_e_o == True:
     #generate random number
     ran_int = random.randint(1, 10)
     print(f'You have randomly generated {ran_int}')
     if ran_int in range(1, 4):
         subprocess.run(["ls"])
+        break
     else:
-        print("error")
+        my_e_o = is_even_odd()
 else:
     #runs tetris
     subprocess.run(["bastet"])
